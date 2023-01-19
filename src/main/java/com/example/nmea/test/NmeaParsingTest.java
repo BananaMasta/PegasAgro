@@ -23,7 +23,11 @@ import java.util.Map;
 public class NmeaParsingTest {
     static SentenceReader reader;
 
-    public  double fileParsing() throws InterruptedException, SchemaException, IllegalAccessException {
+    public static void main(String[] args) throws SchemaException, InterruptedException, IllegalAccessException {
+        System.out.println(fileParsing());
+    }
+
+    public static double fileParsing() throws InterruptedException, SchemaException, IllegalAccessException {
         try {
             reader = new SentenceReader(new FileInputStream("nmea.log"));
         } catch (FileNotFoundException e) {
